@@ -1,3 +1,3 @@
 # Practise JS 5
 
-[GH page](https://chernat.github.io/PractiseJS3/)
+[GH page](https://chernat.github.io/Practise-JS5/)
