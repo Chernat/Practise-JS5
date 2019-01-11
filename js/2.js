@@ -2,20 +2,18 @@ var num1 = {
   number: 9
 }
 var num2 = {
-  number: 2
+  number: 3
 }
 
-console.log(getDoubled(num1));
-console.log(getDoubledTripled(getDoubled(num1)));
-console.log(getDoubled(num2));
-console.log(getDoubledTripled(getDoubled(num2)));
+console.log(getDoubled.call(num1));
+console.log(getDoubledTripled(getDoubled.call(num1)));
+console.log(getDoubled.call(num2));
+console.log(getDoubledTripled(getDoubled.call(num2)));
 
-function getDoubled(obj) {
-  obj.number *= 2;
-  return obj;
+function getDoubled() {
+  return this.number * 2;
 }
 
-function getDoubledTripled(obj) {
-  obj.number *= 3;
-  return obj;
+function getDoubledTripled(num) {
+  return num * 3;
 }

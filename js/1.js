@@ -1,9 +1,13 @@
 var man = {
-  name: 'Kolya'
-}
+  name: 'Kolya',
+  getNameMan: function() {
+    console.log(this.name);
+  }
+};
 
-console.log(getName(man));
+console.log(getName.call(man));
+man.getNameMan();
 
-function getName(obj) {
-  return obj.name;
-}
+function getName() {
+  return this.name;
+};
