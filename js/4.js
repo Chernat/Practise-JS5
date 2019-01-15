@@ -10,13 +10,13 @@ function cityConstructor(name, population, country) {
   this.name = name,
   this.population = population,
   this.country = country,
-  this.getCityName = function() {
+  this.GetCityName = function() {
     return this.name;
   };
-  this.getPopulation = function() {
+  this.GetPopulation = function() {
     return this.population;
-  }
-  this.addCitizen = function() {
+  };
+  this.AddCitizen = function() {
     return ++population;
-  }
+  };
 }

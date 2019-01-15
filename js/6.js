@@ -5,7 +5,7 @@ console.log(nextSlide());
 console.log(previosSlide());
 console.log(slideNum(1));
 console.log(currentSlideInfo());
-console.log(addSlide(4, 'man.jpg', 'Man'))
+console.log(addSlide(4, 'man.jpg', 'Man'));
 console.log(deletSlide(2));
 
 function nextSlide() {
@@ -47,8 +47,12 @@ function addSlide(num, a, b) {
     slider.push({image: a, alt: b});
   } else if (0 === (num - 1)) {
     slider.unshift({image: a, alt: b});
+    currentSlide++;
   } else {
     slider.splice(num - 1, 0, {image: a, alt: b});
+    if (currentSlide === num || currentSlide > num) {
+      currentSlide++;
+    }
   }
 
   return slider;

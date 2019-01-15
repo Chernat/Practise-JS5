@@ -10,4 +10,4 @@ man.getNameMan();
 
 function getName() {
   return this.name;
-};
+}

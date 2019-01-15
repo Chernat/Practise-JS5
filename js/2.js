@@ -1,9 +1,10 @@
 var num1 = {
   number: 9
-}
+};
+
 var num2 = {
   number: 3
-}
+};
 
 console.log(getDoubled.call(num1));
 console.log(getDoubledTripled(getDoubled.call(num1)));
