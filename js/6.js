@@ -45,6 +45,7 @@ function currentSlideInfo() {
 function addSlide(num, a, b) {
   if (num - 1 > slider.length) {
     slider.push({image: a, alt: b});
+    currentSlide++;
   } else if (0 === (num - 1)) {
     slider.unshift({image: a, alt: b});
     currentSlide++;
