@@ -5,8 +5,8 @@ console.log(nextSlide());
 console.log(previosSlide());
 console.log(slideNum(1));
 console.log(currentSlideInfo());
-console.log(addSlide(4, 'man.jpg', 'Man'));
-console.log(deletSlide(2));
+console.log(addSlide(3, 'man.jpg', 'Man'));
+console.log(deletSlide(1));
 
 function nextSlide() {
   if (currentSlide < slider.length - 1) {
@@ -60,6 +60,12 @@ function addSlide(num, a, b) {
 }
 
 function deletSlide(num) {
+  if ((currentSlide === num - 1) && (currentSlide === slider.length)) {
+    currentSlide--;
+  } else {
+    currentSlide++;
+  }
+
   if (num > slider.length - 1) {
     console.log('failed number');
   } else {
